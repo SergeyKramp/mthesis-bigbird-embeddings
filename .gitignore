@@ -1,0 +1,14 @@
+.python-version
+*__pycache__
+.ipynb_checkpoints
+.vscode
+
+archive 
+
+data/balanced
+data/text_chunks
+pickles/
+fine_tuned_models
+
+test.py
+test.ipynb

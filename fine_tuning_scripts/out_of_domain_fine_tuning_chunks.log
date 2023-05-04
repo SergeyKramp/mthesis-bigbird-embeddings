@@ -1,0 +1,86 @@
+2023-03-27 16:28:07,584 - INFO - Created train and test datasets
+2023-03-27 16:28:07,629 - INFO - Split train data to fine-tune and train datasets
+2023-03-27 16:28:07,725 - INFO - Pickled test dataset
+2023-03-27 16:28:08,165 - INFO - Pickled train dataset
+2023-03-27 16:28:08,166 - INFO - Initializing fine-tune dataset
+2023-03-27 16:31:28,644 - INFO - Extracted encodings and labels from chunks and initialized dataset
+2023-03-27 16:31:53,613 - INFO - Pickled fine-tune dataset
+2023-03-27 16:31:53,665 - INFO - Split fine-tune data to fine-tune and validation datasets
+2023-03-27 16:31:56,814 - INFO - Training...
+2023-03-27 16:31:56,814 - INFO - ======== Epoch 1 / 3 ========
+2023-03-27 16:49:38,169 - INFO -   Batch 1,000  of  18,642.    Elapsed: 0:17:41.      Average Loss: 3.1193
+2023-03-27 17:07:20,864 - INFO -   Batch 2,000  of  18,642.    Elapsed: 0:35:24.      Average Loss: 3.0245
+2023-03-27 17:25:01,897 - INFO -   Batch 3,000  of  18,642.    Elapsed: 0:53:05.      Average Loss: 2.7286
+2023-03-27 17:42:43,697 - INFO -   Batch 4,000  of  18,642.    Elapsed: 1:10:47.      Average Loss: 2.5464
+2023-03-27 18:00:24,845 - INFO -   Batch 5,000  of  18,642.    Elapsed: 1:28:28.      Average Loss: 2.3762
+2023-03-27 18:18:07,270 - INFO -   Batch 6,000  of  18,642.    Elapsed: 1:46:10.      Average Loss: 2.3349
+2023-03-27 18:35:48,383 - INFO -   Batch 7,000  of  18,642.    Elapsed: 2:03:52.      Average Loss: 2.2692
+2023-03-27 18:53:29,920 - INFO -   Batch 8,000  of  18,642.    Elapsed: 2:21:33.      Average Loss: 2.2328
+2023-03-27 19:11:11,899 - INFO -   Batch 9,000  of  18,642.    Elapsed: 2:39:15.      Average Loss: 2.257
+2023-03-27 19:28:53,262 - INFO -   Batch 10,000  of  18,642.    Elapsed: 2:56:56.      Average Loss: 2.2548
+2023-03-27 19:46:37,091 - INFO -   Batch 11,000  of  18,642.    Elapsed: 3:14:40.      Average Loss: 2.2665
+2023-03-27 20:04:18,758 - INFO -   Batch 12,000  of  18,642.    Elapsed: 3:32:22.      Average Loss: 2.2409
+2023-03-27 20:22:01,274 - INFO -   Batch 13,000  of  18,642.    Elapsed: 3:50:04.      Average Loss: 2.1958
+2023-03-27 20:39:42,291 - INFO -   Batch 14,000  of  18,642.    Elapsed: 4:07:45.      Average Loss: 2.106
+2023-03-27 20:57:24,022 - INFO -   Batch 15,000  of  18,642.    Elapsed: 4:25:27.      Average Loss: 2.0667
+2023-03-27 21:15:05,386 - INFO -   Batch 16,000  of  18,642.    Elapsed: 4:43:09.      Average Loss: 1.9948
+2023-03-27 21:32:47,080 - INFO -   Batch 17,000  of  18,642.    Elapsed: 5:00:50.      Average Loss: 1.9478
+2023-03-27 21:50:28,375 - INFO -   Batch 18,000  of  18,642.    Elapsed: 5:18:32.      Average Loss: 1.9292
+2023-03-27 22:01:49,162 - INFO -   Epoch Average Training Loss: 1.93
+2023-03-27 22:01:49,163 - INFO -   Training epoch ook: 5:29:52
+2023-03-27 22:01:49,163 - INFO - Running Validation...
+2023-03-27 22:11:48,795 - INFO -   Average Validation Loss: 1.70
+2023-03-27 22:11:48,795 - INFO -   Validation took: 0:10:00
+2023-03-27 22:11:48,795 - INFO - ======== Epoch 2 / 3 ========
+2023-03-27 22:29:32,925 - INFO -   Batch 1,000  of  18,642.    Elapsed: 0:17:44.      Average Loss: 2.0811
+2023-03-27 22:47:15,573 - INFO -   Batch 2,000  of  18,642.    Elapsed: 0:35:27.      Average Loss: 1.8154
+2023-03-27 23:04:57,897 - INFO -   Batch 3,000  of  18,642.    Elapsed: 0:53:09.      Average Loss: 1.6782
+2023-03-27 23:22:40,254 - INFO -   Batch 4,000  of  18,642.    Elapsed: 1:10:51.      Average Loss: 1.6817
+2023-03-27 23:40:23,055 - INFO -   Batch 5,000  of  18,642.    Elapsed: 1:28:34.      Average Loss: 1.6724
+2023-03-27 23:58:04,131 - INFO -   Batch 6,000  of  18,642.    Elapsed: 1:46:15.      Average Loss: 1.7032
+2023-03-28 00:15:46,069 - INFO -   Batch 7,000  of  18,642.    Elapsed: 2:03:57.      Average Loss: 1.7062
+2023-03-28 00:33:28,000 - INFO -   Batch 8,000  of  18,642.    Elapsed: 2:21:39.      Average Loss: 1.7268
+2023-03-28 00:51:09,764 - INFO -   Batch 9,000  of  18,642.    Elapsed: 2:39:21.      Average Loss: 1.7741
+2023-03-28 01:08:53,488 - INFO -   Batch 10,000  of  18,642.    Elapsed: 2:57:05.      Average Loss: 1.7856
+2023-03-28 01:26:35,093 - INFO -   Batch 11,000  of  18,642.    Elapsed: 3:14:46.      Average Loss: 1.7883
+2023-03-28 01:44:16,182 - INFO -   Batch 12,000  of  18,642.    Elapsed: 3:32:27.      Average Loss: 1.7981
+2023-03-28 02:01:56,916 - INFO -   Batch 13,000  of  18,642.    Elapsed: 3:50:08.      Average Loss: 1.7565
+2023-03-28 02:19:37,841 - INFO -   Batch 14,000  of  18,642.    Elapsed: 4:07:49.      Average Loss: 1.6811
+2023-03-28 02:37:18,550 - INFO -   Batch 15,000  of  18,642.    Elapsed: 4:25:30.      Average Loss: 1.638
+2023-03-28 02:54:58,683 - INFO -   Batch 16,000  of  18,642.    Elapsed: 4:43:10.      Average Loss: 1.5792
+2023-03-28 03:12:40,035 - INFO -   Batch 17,000  of  18,642.    Elapsed: 5:00:51.      Average Loss: 1.5515
+2023-03-28 03:30:23,851 - INFO -   Batch 18,000  of  18,642.    Elapsed: 5:18:35.      Average Loss: 1.5491
+2023-03-28 03:41:44,108 - INFO -   Epoch Average Training Loss: 1.55
+2023-03-28 03:41:44,108 - INFO -   Training epoch ook: 5:29:55
+2023-03-28 03:41:44,108 - INFO - Running Validation...
+2023-03-28 03:51:42,735 - INFO -   Average Validation Loss: 1.67
+2023-03-28 03:51:42,735 - INFO -   Validation took: 0:09:59
+2023-03-28 03:51:42,735 - INFO - ======== Epoch 3 / 3 ========
+2023-03-28 04:09:24,194 - INFO -   Batch 1,000  of  18,642.    Elapsed: 0:17:41.      Average Loss: 1.8674
+2023-03-28 04:27:05,049 - INFO -   Batch 2,000  of  18,642.    Elapsed: 0:35:22.      Average Loss: 1.6255
+2023-03-28 04:44:46,573 - INFO -   Batch 3,000  of  18,642.    Elapsed: 0:53:04.      Average Loss: 1.483
+2023-03-28 05:02:27,912 - INFO -   Batch 4,000  of  18,642.    Elapsed: 1:10:45.      Average Loss: 1.4327
+2023-03-28 05:20:09,246 - INFO -   Batch 5,000  of  18,642.    Elapsed: 1:28:27.      Average Loss: 1.4267
+2023-03-28 05:37:50,815 - INFO -   Batch 6,000  of  18,642.    Elapsed: 1:46:08.      Average Loss: 1.5006
+2023-03-28 05:55:32,134 - INFO -   Batch 7,000  of  18,642.    Elapsed: 2:03:49.      Average Loss: 1.5094
+2023-03-28 06:13:14,268 - INFO -   Batch 8,000  of  18,642.    Elapsed: 2:21:32.      Average Loss: 1.4778
+2023-03-28 06:30:57,589 - INFO -   Batch 9,000  of  18,642.    Elapsed: 2:39:15.      Average Loss: 1.5031
+2023-03-28 06:48:39,768 - INFO -   Batch 10,000  of  18,642.    Elapsed: 2:56:57.      Average Loss: 1.503
+2023-03-28 07:06:20,971 - INFO -   Batch 11,000  of  18,642.    Elapsed: 3:14:38.      Average Loss: 1.525
+2023-03-28 07:24:02,633 - INFO -   Batch 12,000  of  18,642.    Elapsed: 3:32:20.      Average Loss: 1.5351
+2023-03-28 07:41:44,819 - INFO -   Batch 13,000  of  18,642.    Elapsed: 3:50:02.      Average Loss: 1.495
+2023-03-28 07:59:27,372 - INFO -   Batch 14,000  of  18,642.    Elapsed: 4:07:45.      Average Loss: 1.4209
+2023-03-28 08:17:09,377 - INFO -   Batch 15,000  of  18,642.    Elapsed: 4:25:27.      Average Loss: 1.3723
+2023-03-28 08:34:51,833 - INFO -   Batch 16,000  of  18,642.    Elapsed: 4:43:09.      Average Loss: 1.3211
+2023-03-28 08:52:35,375 - INFO -   Batch 17,000  of  18,642.    Elapsed: 5:00:53.      Average Loss: 1.2797
+2023-03-28 09:10:17,707 - INFO -   Batch 18,000  of  18,642.    Elapsed: 5:18:35.      Average Loss: 1.282
+2023-03-28 09:21:38,826 - INFO -   Epoch Average Training Loss: 1.28
+2023-03-28 09:21:38,826 - INFO -   Training epoch ook: 5:29:56
+2023-03-28 09:21:38,826 - INFO - Running Validation...
+2023-03-28 09:31:38,012 - INFO -   Average Validation Loss: 1.63
+2023-03-28 09:31:38,012 - INFO -   Validation took: 0:09:59
+2023-03-28 09:31:38,012 - INFO - 
+2023-03-28 09:31:38,012 - INFO - Training complete!
+2023-03-28 09:31:38,013 - INFO - Pickled loss values
+2023-03-28 09:31:38,589 - INFO - Saved model and tokenizer
+2023-03-28 09:31:38,589 - INFO - Done!
