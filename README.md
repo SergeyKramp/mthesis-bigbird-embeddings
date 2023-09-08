@@ -11,7 +11,7 @@ TBD
 
 ## TLDR
 In this work we used embeddings from a fine-tuned Big Bird [_(Zaheer et al., 2020)_](https://arxiv.org/abs/2007.14062) model to perform Native Language Identification (NLI) on the Reddit L2 dataset.
-Here you will find the code used to sample the data, script used for fine-tuning Big Bird, and notebooks containing the experiments described in the paper. 
+Here you will find the code used to sample the data, scripts used for fine-tuning, and notebooks containing the experiments described in the paper. 
 
 What you will not find in this repository is the data used. You can download the Reddit L2 dataset [here](http://cl.haifa.ac.il/projects/L2/) (it appears as __Reddit-L2 chunks__).
 
