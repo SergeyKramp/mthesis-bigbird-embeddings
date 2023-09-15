@@ -6,8 +6,13 @@ The weights of the fine-tuned Big Bird model are available on [HuggingFace](http
 
 For citing this work, please use the following bibtex entry:
 
-```
-TBD
+```latex
+@inproceedings{Kramp2023NativeLI,
+  title={Native Language Identification with Big Bird Embeddings},
+  author={Sergey Kramp and Giovanni Cassani and Chris Emmery},
+  year={2023},
+  url={https://api.semanticscholar.org/CorpusID:261705924}
+}
 ```
 
 ## TLDR
