@@ -1,8 +1,6 @@
 # Native Language Identification with Big Bird Embeddings
 
-This is the repository for the code used in the paper [Native Language Identification with Big Bird Embeddings](https://arxiv.org/abs/2104.05247) by [Sergey Kramp](https://www.linkedin.com/in/sergey-kramp-1376bb156/), [Giovanni Cassani](https://research.tilburguniversity.edu/en/persons/giovanni-cassani) and [Chris Emmery](https://research.tilburguniversity.edu/en/persons/chris-emmery). The code is released under the [MIT license](https://opensource.org/licenses/MIT). The Reddit L2 dataset used in the work is available on [here](http://cl.haifa.ac.il/projects/L2/).
-
-The weights of the fine-tuned Big Bird model are available on [HuggingFace](https://huggingface.co/Skramp/bigbird_reddit_l2).
+This is the repository for the code used in the paper [Native Language Identification with Big Bird Embeddings](https://arxiv.org/abs/2104.05247) by [Sergey Kramp](https://www.linkedin.com/in/sergey-kramp-1376bb156/), [Giovanni Cassani](https://research.tilburguniversity.edu/en/persons/giovanni-cassani) and [Chris Emmery](https://research.tilburguniversity.edu/en/persons/chris-emmery). The code is released under the [MIT license](https://opensource.org/licenses/MIT).
 
 For citing this work, please use the following bibtex entry:
 
@@ -20,6 +18,8 @@ In this work we used embeddings from a fine-tuned Big Bird [_(Zaheer et al., 202
 Here you will find the code used to sample the data, scripts used for fine-tuning, and notebooks containing the experiments described in the paper. 
 
 What you will not find in this repository is the data used. You can download the Reddit L2 dataset [here](http://cl.haifa.ac.il/projects/L2/) (it appears as __Reddit-L2 chunks__).
+
+The weights of the fine-tuned Big Bird model are available on [HuggingFace](https://huggingface.co/Skramp/bigbird_reddit_l2).
 
 ## How to use the code
 - **data**: contains classes for working with the data.
