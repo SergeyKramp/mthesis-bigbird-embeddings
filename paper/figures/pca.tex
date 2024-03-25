@@ -1,0 +1,369 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary[groupplots]
+\usepgfplotslibrary{colorbrewer}
+
+\usepackage[T1]{fontenc}
+% % Palatino for main text and math
+\usepackage{times}
+
+% % Helvetica for sans serif
+% % (scaled to match size of Palatino)
+% \usepackage[scaled=0.90]{helvet}
+
+% % Bera Mono for monospaced
+% % (scaled to match size of Palatino)
+% \usepackage[scaled=0.85]{beramono}
+
+
+\begin{document}
+
+% \definecolor{darkslategray38}{RGB}{38,38,38}
+% \definecolor{darkslategray66}{RGB}{66,66,66}
+% \definecolor{goldenrod22320431}{RGB}{223,204,31}
+% \definecolor{lightgray204}{RGB}{204,204,204}
+% \definecolor{peru22412844}{RGB}{224,128,44}
+
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+\footnotesize
+\definecolor{darkslategray38}{RGB}{38,38,38}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\definecolor{steelblue31119180}{HTML}{648fff}
+\definecolor{color1}{HTML}{785ef0}
+\definecolor{color2}{HTML}{fe6100}
+\definecolor{color3}{HTML}{dc267f}
+\definecolor{color4}{HTML}{ffb000}
+\definecolor{color5}{HTML}{000000}
+
+\begin{groupplot}[group style={group size=2 by 1, horizontal sep=0.2cm}]
+\nextgroupplot[
+axis line style={lightgray204},
+enlargelimits=false,
+height=9cm,
+tick align=outside,
+title style={yshift=-1.4ex},
+title={Pretrained Model},
+width=6cm,
+x grid style={lightgray204},
+xlabel=\textcolor{darkslategray38}{},
+xmajorticks=false,
+xmin=-0.345002016425133, xmax=0.17488451898098,
+xtick style={color=darkslategray38},
+y grid style={lightgray204},
+ylabel=\textcolor{darkslategray38}{},
+ymajorticks=false,
+ymin=-0.226713313907385, ymax=0.44192358776927,
+ytick style={color=darkslategray38}
+]
+\addplot [draw=steelblue31119180, fill=steelblue31119180, mark=*, only marks]
+table{%
+x  y
+-0.321370810270309 0.411531001329422
+0.108572989702225 0.117562368512154
+-0.0270839389413595 0.0959853604435921
+-0.0337204337120056 -0.0888960212469101
+0.0107075739651918 -0.0103378528729081
+0.0526995472609997 0.0433132313191891
+-0.132168024778366 0.136405184864998
+-0.113247662782669 -0.0411282628774643
+-0.0758965238928795 0.000550828000996262
+0.0544491112232208 -0.0231173411011696
+-0.0851535722613335 -0.196320727467537
+0.1340072453022 -0.00257052527740598
+-0.0443454273045063 0.131003856658936
+-0.00489763310179114 0.1563750654459
+0.125616654753685 -0.079339787364006
+0.0182028263807297 -0.188316702842712
+0.14825913310051 -0.176354140043259
+-0.0104159666225314 -0.0827919021248817
+0.0890020579099655 -0.117051869630814
+0.0326680913567543 0.0766520425677299
+0.0275096483528614 -0.106718152761459
+0.151253312826157 -0.0189445409923792
+-0.0353056266903877 -0.144636884331703
+};
+\draw (axis cs:-0.24370810270309,0.396531001329422) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{English};
+\draw (axis cs:0.0935729897022247,0.148562368512154) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{German};
+\draw (axis cs:-0.1220839389413595,0.0809853604435921) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Bulgarian};
+\draw (axis cs:-0.1187204337120056,-0.08389602124691) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Croatian};
+\draw (axis cs:-0.04429242603480816,-0.0253378528729081) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Czech};
+\draw (axis cs:-0.0326995472609997,0.0463132313191891) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Estonian};
+\draw (axis cs:-0.207168024778366,0.151405184864998) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Finnish};
+\draw (axis cs:-0.19247662782669,-0.0301282628774643) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{French};
+\draw (axis cs:-0.1408965238928795,0.0044491719990037) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Greek};
+\draw (axis cs:-0.0094491112232208,-0.0481173411011696) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Hungarian};
+\draw (axis cs:-0.150153572261333,-0.211320727467537) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Italian};
+\draw (axis cs:0.0790072453022,0.016429474722594) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Lithuanian};
+\draw (axis cs:-0.0893454273045063,0.110003856658936) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Dutch};
+\draw (axis cs:0.0151023668982089,0.1813750654459) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Norwegian};
+\draw (axis cs:0.110616654753685,-0.094339787364006) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Polish};
+\draw (axis cs:0.06320282638072968,-0.213316702842712) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Portuguese};
+\draw (axis cs:0.08025913310051,-0.161354140043259) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Romanian};
+\draw (axis cs:0.00458403337746859,-0.0677919021248817) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Russian};
+\draw (axis cs:0.104002057909966,-0.132051869630814) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Serbian};
+\draw (axis cs:0.0876680913567543,0.10165204256773) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Slovenian};
+\draw (axis cs:-0.0425096483528614,-0.121718152761459) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Spanish};
+\draw (axis cs:0.131253312826157,-0.0339445409923792) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Swedish};
+\draw (axis cs:-0.1003056266903877,-0.159636884331703) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Turkish};
+
+\nextgroupplot[
+axis line style={lightgray204},
+enlargelimits=false,
+height=9cm,
+tick align=outside,
+title style={yshift=-1.4ex},
+title={Fine-Tuned Model},
+width=6cm,
+x grid style={lightgray204},
+xlabel=\textcolor{darkslategray38}{},
+xmajorticks=false,
+xmin=-5.57091040611267, xmax=6.61993975639343,
+xtick style={color=darkslategray38},
+y grid style={lightgray204},
+ymajorticks=false,
+ymin=-5.53120133876801, ymax=3.88225886821747,
+ytick style={color=darkslategray38}
+]
+\addplot [draw=steelblue31119180, fill=steelblue31119180, mark=*, only marks]
+table{%
+x  y
+-4.17060708999634 -2.20591974258423
+-2.85464429855347 1.27809429168701
+-1.38378155231476 1.80048501491547
+1.76037204265594 0.847255051136017
+5.8740930557251 1.65857899188995
+1.52379834651947 3.23564028739929
+1.97196006774902 3.0368926525116
+-1.73588275909424 -5.10331678390503
+-1.88456916809082 0.0307963788509369
+0.673154830932617 1.40693747997284
+-1.3540370464325 -2.68723583221436
+6.06581020355225 2.20650696754456
+-5.01678085327148 1.88221800327301
+-2.65406656265259 0.0354563407599926
+5.73623752593994 0.560691475868225
+-2.49010252952576 -2.09098100662231
+0.138834878802299 0.528136372566223
+3.73294258117676 -2.54856705665588
+2.4094021320343 -0.78379362821579
+1.83526682853699 3.45437431335449
+-3.20129704475403 -4.58792161941528
+-2.54192638397217 1.93159806728363
+1.02461767196655 -3.06198716163635
+};
+\draw (axis cs:-3.5060708999634,-2.60591974258423) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{English};
+\draw (axis cs:-3.70464429855347,1.07809429168701) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{German};
+\draw (axis cs:0.88378155231476,1.75048501491547) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Bulgarian};
+\draw (axis cs:3.7037204265594,0.847255051136017) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Croatian};
+\draw (axis cs:4.2740930557251,1.45857899188995) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Czech};
+\draw (axis cs:-0.70379834651947,3.19564028739929) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Estonian};
+\draw (axis cs:3.807196006774902,3.0368926525116) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Finnish};
+\draw (axis cs:0.03588275909424,-5.30331678390503) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{French};
+\draw (axis cs:-0.28456916809082,-0.169203621149063) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Greek};
+\draw (axis cs:0.473154830932617,1.20693747997284) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Hungarian};
+\draw (axis cs:0.1040370464325,-2.48723583221436) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Italian};
+\draw (axis cs:3.56581020355225,2.20650696754456) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Lithuanian};
+\draw (axis cs:-3.51678085327148,1.68221800327301) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Dutch};
+\draw (axis cs:-3.4406656265259,0.364543659240007) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Norwegian};
+\draw (axis cs:4.53623752593994,0.360691475868225) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Polish};
+\draw (axis cs:-0.49010252952576,-1.84098100662231) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Portuguese};
+\draw (axis cs:1.0611651211977005,0.328136372566223) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Romanian};
+\draw (axis cs:4.53294258117676,-2.94856705665588) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Russian};
+\draw (axis cs:4.1094021320343,-0.98379362821579) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Serbian};
+\draw (axis cs:4.08526682853699,3.654374331335449) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Slovenian};
+\draw (axis cs:-1.20129704475403,-4.3792161941528) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Spanish};
+\draw (axis cs:-2.74192638397217,2.23159806728363) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Swedish};
+\draw (axis cs:0.824617671966553,-3.36198716163635) node[
+  scale=1.0,
+  text=darkslategray38,
+  rotate=0.0
+]{Turkish};
+\end{groupplot}
+
+\end{tikzpicture}
+
+\end{document}

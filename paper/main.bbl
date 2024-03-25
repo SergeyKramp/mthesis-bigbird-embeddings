@@ -1,0 +1,194 @@
+\begin{thebibliography}{38}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Baldwin et~al.(2013)Baldwin, Cook, Lui, MacKinlay, and Wang}]{DBLP:conf/ijcnlp/BaldwinCLMW13}
+Timothy Baldwin, Paul Cook, Marco Lui, Andrew MacKinlay, and Li~Wang. 2013.
+\newblock \href {https://aclanthology.org/I13-1041/} {How noisy social media text, how diffrnt social media sources?}
+\newblock In \emph{Sixth International Joint Conference on Natural Language Processing, {IJCNLP} 2013, Nagoya, Japan, October 14-18, 2013}, pages 356--364. Asian Federation of Natural Language Processing / {ACL}.
+
+\bibitem[{Beltagy et~al.(2020)Beltagy, Peters, and Cohan}]{DBLP:journals/corr/abs-2004-05150}
+Iz~Beltagy, Matthew~E. Peters, and Arman Cohan. 2020.
+\newblock \href {http://arxiv.org/abs/2004.05150} {Longformer: The long-document transformer}.
+\newblock \emph{CoRR}, abs/2004.05150.
+
+\bibitem[{Bjerva et~al.(2017)Bjerva, Grigonyt{\.e}, {\"O}stling, and Plank}]{bjerva-etal-2017-convolutional}
+Johannes Bjerva, Gintar{\.e} Grigonyt{\.e}, Robert {\"O}stling, and Barbara Plank. 2017.
+\newblock \href {https://doi.org/10.18653/v1/W17-5025} {Neural networks and spelling features for native language identification}.
+\newblock In \emph{Proceedings of the 12th Workshop on Innovative Use of {NLP} for Building Educational Applications}, pages 235--239, Copenhagen, Denmark. Association for Computational Linguistics.
+
+\bibitem[{Blanchard et~al.(2013)Blanchard, Tetreault, Higgins, Cahill, and Chodorow}]{https://doi.org/10.1002/j.2333-8504.2013.tb02331.x}
+Daniel Blanchard, Joel Tetreault, Derrick Higgins, Aoife Cahill, and Martin Chodorow. 2013.
+\newblock \href {https://doi.org/https://doi.org/10.1002/j.2333-8504.2013.tb02331.x} {Toefl11: A corpus of non-native english}.
+\newblock \emph{ETS Research Report Series}, 2013(2):i--15.
+
+\bibitem[{Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert{-}Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and Amodei}]{DBLP:conf/nips/BrownMRSKDNSSAA20}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert{-}Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020.
+\newblock \href {https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html} {Language models are few-shot learners}.
+\newblock In \emph{Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual}.
+
+\bibitem[{Bulatov et~al.(2023)Bulatov, Kuratov, and Burtsev}]{DBLP:journals/corr/abs-2304-11062}
+Aydar Bulatov, Yuri Kuratov, and Mikhail~S. Burtsev. 2023.
+\newblock \href {https://doi.org/10.48550/ARXIV.2304.11062} {Scaling transformer to 1m tokens and beyond with {RMT}}.
+\newblock \emph{CoRR}, abs/2304.11062.
+
+\bibitem[{Chen et~al.(2017)Chen, Strapparava, and Nastase}]{DBLP:conf/acl/ChenSN17}
+Lingzhen Chen, Carlo Strapparava, and Vivi Nastase. 2017.
+\newblock \href {https://doi.org/10.18653/V1/P17-2086} {Improving native language identification by using spelling errors}.
+\newblock In \emph{Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics, {ACL} 2017, Vancouver, Canada, July 30 - August 4, Volume 2: Short Papers}, pages 542--546. Association for Computational Linguistics.
+
+\bibitem[{Cimino et~al.(2013)Cimino, Dell'Orletta, Venturi, and Montemagni}]{DBLP:conf/bea/CiminoDVM13}
+Andrea Cimino, Felice Dell'Orletta, Giulia Venturi, and Simonetta Montemagni. 2013.
+\newblock \href {https://aclanthology.org/W13-1727/} {Linguistic profiling based on general-purpose features and native language identification}.
+\newblock In \emph{Proceedings of the Eighth Workshop on Innovative Use of {NLP} for Building Educational Applications, BEA@NAACL-HLT 2013, June 13, 2013, Atlanta, Georgia, {USA}}, pages 207--215. The Association for Computer Linguistics.
+
+\bibitem[{Dai et~al.(2019)Dai, Yang, Yang, Carbonell, Le, and Salakhutdinov}]{DBLP:conf/acl/DaiYYCLS19}
+Zihang Dai, Zhilin Yang, Yiming Yang, Jaime~G. Carbonell, Quoc~Viet Le, and Ruslan Salakhutdinov. 2019.
+\newblock \href {https://doi.org/10.18653/V1/P19-1285} {Transformer-xl: Attentive language models beyond a fixed-length context}.
+\newblock In \emph{Proceedings of the 57th Conference of the Association for Computational Linguistics, {ACL} 2019, Florence, Italy, July 28- August 2, 2019, Volume 1: Long Papers}, pages 2978--2988. Association for Computational Linguistics.
+
+\bibitem[{Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova}]{DBLP:conf/naacl/DevlinCLT19}
+Jacob Devlin, Ming{-}Wei Chang, Kenton Lee, and Kristina Toutanova. 2019.
+\newblock \href {https://doi.org/10.18653/V1/N19-1423} {{BERT:} pre-training of deep bidirectional transformers for language understanding}.
+\newblock In \emph{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, {NAACL-HLT} 2019, Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers)}, pages 4171--4186. Association for Computational Linguistics.
+
+\bibitem[{Franco-Salvador et~al.(2017)Franco-Salvador, Kondrak, and Rosso}]{franco-salvador-etal-2017-bridging}
+Marc Franco-Salvador, Greg Kondrak, and Paolo Rosso. 2017.
+\newblock \href {https://doi.org/10.1016/j.procs.2017.08.068} {Bridging the native language and language variety identification tasks}.
+\newblock \emph{Procedia Computer Science}, 112:1554--1561.
+
+\bibitem[{Girshick(1936)}]{ca8f88b9-5b15-3338-a57a-9a4e79049bef}
+M.~A. Girshick. 1936.
+\newblock \href {http://www.jstor.org/stable/2278378} {Principal components}.
+\newblock \emph{Journal of the American Statistical Association}, 31(195):519--528.
+
+\bibitem[{Goldin et~al.(2018)Goldin, Rabinovich, and Wintner}]{goldin-etal-2018-native}
+Gili Goldin, Ella Rabinovich, and Shuly Wintner. 2018.
+\newblock \href {https://doi.org/10.18653/v1/D18-1395} {Native language identification with user generated content}.
+\newblock In \emph{Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing}, pages 3591--3601, Brussels, Belgium. Association for Computational Linguistics.
+
+\bibitem[{Howard and Ruder(2018)}]{DBLP:conf/acl/RuderH18}
+Jeremy Howard and Sebastian Ruder. 2018.
+\newblock \href {https://doi.org/10.18653/V1/P18-1031} {Universal language model fine-tuning for text classification}.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics, {ACL} 2018, Melbourne, Australia, July 15-20, 2018, Volume 1: Long Papers}, pages 328--339. Association for Computational Linguistics.
+
+\bibitem[{Ircing et~al.(2017)Ircing, {\v{S}}vec, Zaj{\'\i}c, Hladk{\'a}, and Holub}]{ircing-2017-shared-task2-NN}
+Pavel Ircing, Jan {\v{S}}vec, Zbyn{\v{e}}k Zaj{\'\i}c, Barbora Hladk{\'a}, and Martin Holub. 2017.
+\newblock \href {https://doi.org/10.18653/v1/W17-5021} {Combining textual and speech features in the {NLI} task using state-of-the-art machine learning techniques}.
+\newblock In \emph{Proceedings of the 12th Workshop on Innovative Use of {NLP} for Building Educational Applications}, pages 198--209, Copenhagen, Denmark. Association for Computational Linguistics.
+
+\bibitem[{Kingma and Ba(2015)}]{DBLP:journals/corr/KingmaB14}
+Diederik~P. Kingma and Jimmy Ba. 2015.
+\newblock \href {http://arxiv.org/abs/1412.6980} {Adam: {A} method for stochastic optimization}.
+\newblock In \emph{3rd International Conference on Learning Representations, {ICLR} 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings}.
+
+\bibitem[{Koppel et~al.(2005)Koppel, Schler, and Zigdon}]{DBLP:conf/isi/KoppelSZ05}
+Moshe Koppel, Jonathan Schler, and Kfir Zigdon. 2005.
+\newblock \href {https://doi.org/10.1007/11427995\_17} {Automatically determining an anonymous author's native language}.
+\newblock In \emph{Intelligence and Security Informatics, {IEEE} International Conference on Intelligence and Security Informatics, {ISI} 2005, Atlanta, GA, USA, May 19-20, 2005, Proceedings}, volume 3495 of \emph{Lecture Notes in Computer Science}, pages 209--217. Springer.
+
+\bibitem[{Liu and Nocedal(1989)}]{DBLP:journals/mp/LiuN89}
+Dong~C. Liu and Jorge Nocedal. 1989.
+\newblock \href {https://doi.org/10.1007/BF01589116} {On the limited memory {BFGS} method for large scale optimization}.
+\newblock \emph{Math. Program.}, 45(1-3):503--528.
+
+\bibitem[{Lotfi et~al.(2020)Lotfi, Markov, and Daelemans}]{lotfi-etal-2020-gpt2}
+Ehsan Lotfi, Ilia Markov, and Walter Daelemans. 2020.
+\newblock \href {https://doi.org/10.18653/v1/2020.coling-main.159} {A deep generative approach to native language identification}.
+\newblock In \emph{Proceedings of the 28th International Conference on Computational Linguistics}, pages 1778--1783, Barcelona, Spain (Online). International Committee on Computational Linguistics.
+
+\bibitem[{MacDonald(2013)}]{10.3389/fpsyg.2013.00226}
+Maryellen~C. MacDonald. 2013.
+\newblock \href {https://doi.org/10.3389/fpsyg.2013.00226} {How language production shapes language form and comprehension}.
+\newblock \emph{Frontiers in Psychology}, 4.
+
+\bibitem[{Malmasi et~al.(2017)Malmasi, Evanini, Cahill, Tetreault, Pugh, Hamill, Napolitano, and Qian}]{DBLP:conf/bea/MalmasiECTPHNQ17}
+Shervin Malmasi, Keelan Evanini, Aoife Cahill, Joel~R. Tetreault, Robert~A. Pugh, Christopher Hamill, Diane Napolitano, and Yao Qian. 2017.
+\newblock \href {https://doi.org/10.18653/V1/W17-5007} {A report on the 2017 native language identification shared task}.
+\newblock In \emph{Proceedings of the 12th Workshop on Innovative Use of {NLP} for Building Educational Applications, BEA@EMNLP 2017, Copenhagen, Denmark, September 8, 2017}, pages 62--75. Association for Computational Linguistics.
+
+\bibitem[{Moschitti and Basili(2004)}]{DBLP:conf/ecir/MoschittiB04}
+Alessandro Moschitti and Roberto Basili. 2004.
+\newblock \href {https://doi.org/10.1007/978-3-540-24752-4\_14} {Complex linguistic features for text classification: {A} comprehensive study}.
+\newblock In \emph{Advances in Information Retrieval, 26th European Conference on {IR} Research, {ECIR} 2004, Sunderland, UK, April 5-7, 2004, Proceedings}, volume 2997 of \emph{Lecture Notes in Computer Science}, pages 181--196. Springer.
+
+\bibitem[{Odlin(1989)}]{Odlin1989}
+Terence Odlin. 1989.
+\newblock \href {https://doi.org/https://doi.org/10.1017/CBO9781139524537} {\emph{Language Transfer}}.
+\newblock Cambridge Applied Linguistics. Cambridge University Press.
+
+\bibitem[{Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan, Killeen, Lin, Gimelshein, Antiga, Desmaison, K{\"{o}}pf, Yang, DeVito, Raison, Tejani, Chilamkurthy, Steiner, Fang, Bai, and Chintala}]{DBLP:conf/nips/PaszkeGMLBCKLGA19}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban Desmaison, Andreas K{\"{o}}pf, Edward~Z. Yang, Zachary DeVito, Martin Raison, Alykhan Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and Soumith Chintala. 2019.
+\newblock \href {https://proceedings.neurips.cc/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html} {Pytorch: An imperative style, high-performance deep learning library}.
+\newblock In \emph{Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019, Vancouver, BC, Canada}, pages 8024--8035.
+
+\bibitem[{Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, VanderPlas, Passos, Cournapeau, Brucher, Perrot, and Duchesnay}]{DBLP:journals/jmlr/PedregosaVGMTGBPWDVPCBPD11}
+Fabian Pedregosa, Ga{\"{e}}l Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake VanderPlas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Edouard Duchesnay. 2011.
+\newblock \href {https://doi.org/10.5555/1953048.2078195} {Scikit-learn: Machine learning in python}.
+\newblock \emph{J. Mach. Learn. Res.}, 12:2825--2830.
+
+\bibitem[{Rabinovich et~al.(2018)Rabinovich, Tsvetkov, and Wintner}]{DBLP:journals/tacl/RabinovichTW18}
+Ella Rabinovich, Yulia Tsvetkov, and Shuly Wintner. 2018.
+\newblock \href {https://doi.org/10.1162/tacl\_a\_00024} {Native language cognate effects on second language lexical choice}.
+\newblock \emph{Trans. Assoc. Comput. Linguistics}, 6:329--342.
+
+\bibitem[{Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever et~al.}]{Radford2019LanguageMA}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al. 2019.
+\newblock \href {https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf} {Language models are unsupervised multitask learners}.
+\newblock \emph{OpenAI blog}, 1(8):9.
+
+\bibitem[{Steinbakken and Gamb{\"a}ck(2020)}]{steinbakken-gamback-2020-bert-nli}
+Stian Steinbakken and Bj{\"o}rn Gamb{\"a}ck. 2020.
+\newblock \href {https://aclanthology.org/2020.icon-main.35} {Native-language identification with attention}.
+\newblock In \emph{Proceedings of the 17th International Conference on Natural Language Processing (ICON)}, pages 261--271, Indian Institute of Technology Patna, Patna, India. NLP Association of India (NLPAI).
+
+\bibitem[{Sun et~al.(2019)Sun, Qiu, Xu, and Huang}]{DBLP:conf/cncl/SunQXH19}
+Chi Sun, Xipeng Qiu, Yige Xu, and Xuanjing Huang. 2019.
+\newblock \href {https://doi.org/10.1007/978-3-030-32381-3\_16} {How to fine-tune {BERT} for text classification?}
+\newblock In \emph{Chinese Computational Linguistics - 18th China National Conference, {CCL} 2019, Kunming, China, October 18-20, 2019, Proceedings}, volume 11856 of \emph{Lecture Notes in Computer Science}, pages 194--206. Springer.
+
+\bibitem[{Tetreault et~al.(2013)Tetreault, Blanchard, and Cahill}]{tetreault-shared-task-13}
+Joel Tetreault, Daniel Blanchard, and Aoife Cahill. 2013.
+\newblock \href {https://aclanthology.org/W13-1706} {A report on the first native language identification shared task}.
+\newblock In \emph{Proceedings of the Eighth Workshop on Innovative Use of {NLP} for Building Educational Applications}, pages 48--57, Atlanta, Georgia. Association for Computational Linguistics.
+
+\bibitem[{Tipping and Bishop(2002)}]{10.1111/1467-9868.00196}
+Michael~E. Tipping and Christopher~M. Bishop. 2002.
+\newblock \href {https://doi.org/10.1111/1467-9868.00196} {{Probabilistic Principal Component Analysis}}.
+\newblock \emph{Journal of the Royal Statistical Society Series B: Statistical Methodology}, 61(3):611--622.
+
+\bibitem[{Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}]{DBLP:conf/nips/VaswaniSPUJGKP17}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017.
+\newblock \href {https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html} {Attention is all you need}.
+\newblock In \emph{Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017, December 4-9, 2017, Long Beach, CA, {USA}}, pages 5998--6008.
+
+\bibitem[{Virtanen et~al.(2020)Virtanen, Gommers, Oliphant, Haberland, Reddy, Cournapeau, Burovski, Peterson, Weckesser, Bright, {van der Walt}, Brett, Wilson, Millman, Mayorov, Nelson, Jones, Kern, Larson, Carey, Polat, Feng, Moore, {VanderPlas}, Laxalde, Perktold, Cimrman, Henriksen, Quintero, Harris, Archibald, Ribeiro, Pedregosa, {van Mulbregt}, and {SciPy 1.0 Contributors}}]{2020SciPy-NMeth}
+Pauli Virtanen, Ralf Gommers, Travis~E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, Jonathan Bright, St{\'e}fan~J. {van der Walt}, Matthew Brett, Joshua Wilson, K.~Jarrod Millman, Nikolay Mayorov, Andrew R.~J. Nelson, Eric Jones, Robert Kern, Eric Larson, C~J Carey, {\.I}lhan Polat, Yu~Feng, Eric~W. Moore, Jake {VanderPlas}, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E.~A. Quintero, Charles~R. Harris, Anne~M. Archibald, Ant{\^o}nio~H. Ribeiro, Fabian Pedregosa, Paul {van Mulbregt}, and {SciPy 1.0 Contributors}. 2020.
+\newblock \href {https://doi.org/10.1038/s41592-019-0686-2} {{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in Python}}.
+\newblock \emph{Nature Methods}, 17:261--272.
+
+\bibitem[{Volansky et~al.(2015)Volansky, Ordan, and Wintner}]{DBLP:journals/lalc/VolanskyOW15}
+Vered Volansky, Noam Ordan, and Shuly Wintner. 2015.
+\newblock \href {https://doi.org/10.1093/LLC/FQT031} {On the features of translationese}.
+\newblock \emph{Digit. Scholarsh. Humanit.}, 30(1):98--118.
+
+\bibitem[{Wagner(2010)}]{DBLP:journals/lre/Wagner10}
+Wiebke Wagner. 2010.
+\newblock \href {https://doi.org/10.1007/S10579-010-9124-X} {Steven bird, ewan klein and edward loper: Natural language processing with python, analyzing text with the natural language toolkit - o'reilly media, beijing, 2009, {ISBN} 978-0-596-51649-9}.
+\newblock \emph{Lang. Resour. Evaluation}, 44(4):421--424.
+
+\bibitem[{Ward(1963)}]{doi:10.1080/01621459.1963.10500845}
+Joe~H. Ward, Jr. 1963.
+\newblock \href {https://doi.org/10.1080/01621459.1963.10500845} {Hierarchical grouping to optimize an objective function}.
+\newblock \emph{Journal of the American Statistical Association}, 58(301):236--244.
+
+\bibitem[{Wolf et~al.(2019)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac, Rault, Louf, Funtowicz, and Brew}]{transformers}
+Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, R{\'{e}}mi Louf, Morgan Funtowicz, and Jamie Brew. 2019.
+\newblock \href {http://arxiv.org/abs/1910.03771} {Huggingface's transformers: State-of-the-art natural language processing}.
+\newblock \emph{CoRR}, abs/1910.03771.
+
+\bibitem[{Zaheer et~al.(2020)Zaheer, Guruganesh, Dubey, Ainslie, Alberti, Onta{\~{n}}{\'{o}}n, Pham, Ravula, Wang, Yang, and Ahmed}]{DBLP:conf/nips/ZaheerGDAAOPRWY20}
+Manzil Zaheer, Guru Guruganesh, Kumar~Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Onta{\~{n}}{\'{o}}n, Philip Pham, Anirudh Ravula, Qifan Wang, Li~Yang, and Amr Ahmed. 2020.
+\newblock \href {https://proceedings.neurips.cc/paper/2020/hash/c8512d142a2d849725f31a9a7a361ab9-Abstract.html} {Big bird: Transformers for longer sequences}.
+\newblock In \emph{Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual}.
+
+\end{thebibliography}
