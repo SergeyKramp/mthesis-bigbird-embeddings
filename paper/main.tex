@@ -1,0 +1,233 @@
+\documentclass[10pt, a4paper]{article}
+% ----------------------- LREC TEMPLATE --------------------------------
+\usepackage{lrec-coling2024}
+\usepackage[scaled]{beramono}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% ----------------------- TIKZ ETC ---------------------------------
+\usepackage[tbtags]{amsmath}
+\usepackage{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary[groupplots,dateplot]
+\usetikzlibrary[patterns,shapes.arrows]
+\unexpanded{\def\startgroupplot{\groupplot}}
+\unexpanded{\def\stopgroupplot{\endgroupplot}}
+% ----------------------- PACKAGES --------------------------------
+\usepackage{booktabs}  
+\usepackage{hyperref}        
+\usepackage{xurl}
+\usepackage{soul}
+ \definecolor{darkblue}{rgb}{0, 0, 0.5}
+  \hypersetup{colorlinks=true, citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
+% URL typesettin
+% % ----------------------- FRONTMATTER % --------------------------------
+
+\title{BigNLI: Native Language Identification with Big Bird Embeddings}
+
+\name{Sergey Kramp, Giovanni Cassani, Chris Emmery}
+\address{CSAI, Tilburg University \\ 
+  \texttt{sergey.kramp@gmail.com}, \texttt{g.cassani@tilburguniversity.edu}, \texttt{cmry@pm.me}
+  }
+
+\date{}
+
+\abstract{
+Native Language Identification (NLI) intends to classify an author's native language based on their writing in another language.
+Historically, the task has heavily relied on time-consuming linguistic feature engineering, and NLI transformer models have thus far failed to offer effective, practical alternatives. The current work shows input size is a limiting factor, and that classifiers trained using Big Bird embeddings outperform linguistic feature engineering models (for which we reproduce previous work) by a large margin on the Reddit-L2 dataset. Additionally, we provide further insight into input length dependencies, show consistent out-of-sample (Europe subreddit) and out-of-domain (TOEFL-11) performance, and qualitatively analyze the embedding space. Given the effectiveness and computational efficiency of this  method, we believe it offers a promising avenue for future NLI work. \\ \newline \Keywords{natural language identification, transformer embeddings, stylometry, text classification} }
+
+\begin{document}
+\maketitleabstract
+
+
+\section{Introduction} \label{sec:introduction}
+
+Native Language Identification (NLI) operates under the assumption that an author's first language (L1) produces discoverable patterns in a second language (L2) \cite{Odlin1989,10.3389/fpsyg.2013.00226}. Classifying one's native language proves highly useful in various applications, such as in language teaching, where customized feedback could be provided based on the learner native language; in fraud detection, where identifying an unknown author's native language can aid in detecting plagiarism and web fraud; and in consumer analytics. NLI models historically relied on handcrafted linguistic patterns as input features \cite{DBLP:conf/isi/KoppelSZ05,tetreault-shared-task-13,DBLP:conf/bea/CiminoDVM13,DBLP:conf/acl/ChenSN17}; however, such representations are unlikely to capture all required nuances and complexities of this task \cite{DBLP:conf/ecir/MoschittiB04}, in particular on noisier sources of data.
+
+Current transformer models \cite{DBLP:conf/nips/VaswaniSPUJGKP17} have shown success in such challenges \cite{DBLP:conf/nips/BrownMRSKDNSSAA20} but are often limited by input size. This is particularly problematic for NLI which often deals with long texts, such as essays, documents or social media posts. Our work\footnote{Code, data snapshots, model weights, and experimental details are available at \url{https://github.com/SergeyKramp/mthesis-bigbird-embeddings}.} is the first to employ long-form transformer models to overcome these task limitations. We train a simple logistic regression classifier which only uses the embeddings from a (fine-tuned) Big Bird \cite{DBLP:conf/nips/ZaheerGDAAOPRWY20} model as input, and demonstrate it significantly outperforms a similar classifier trained using costly handcrafted feature representations, at a fraction of the inference time. In our analyses, we show largely consistent out-of-sample, and out-of-domain performance, and that the embeddings encode linguistic patterns relevant to NLI. 
+
+
+\section{Related Work}
+
+Seminal NLI work by \newcite{DBLP:conf/isi/KoppelSZ05} used function words, character $n$-grams, and handcrafted error types as features extracted from 1000 articles in five languages. The TOEFL-11 dataset \cite{https://doi.org/10.1002/j.2333-8504.2013.tb02331.x} proved a fruitful resource for two NLI shared tasks \cite{tetreault-shared-task-13,DBLP:conf/bea/MalmasiECTPHNQ17}. However, its controlled collection environment and limited range of topics affected generalization of traditional linguistic features to noisy Internet data \cite{DBLP:conf/ijcnlp/BaldwinCLMW13}. An example of such noisy data is the Reddit-L2 dataset \cite{DBLP:journals/tacl/RabinovichTW18}; the current de facto benchmark for NLI, which we employ as well.
+
+Despite various attempts using neural architectures \cite{ircing-2017-shared-task2-NN,bjerva-etal-2017-convolutional,franco-salvador-etal-2017-bridging}, the current best performance on the Reddit-L2 dataset was obtained by \newcite{goldin-etal-2018-native} using a logistic regression classifier trained on a combination of linguistic features. We implement, and thereby directly compare to, their work in our experiments.
+
+\begin{figure*}[t]
+    \centering
+    \centering
+    \includestandalone[scale=0.87,trim={0.13cm 0.2cm 0.cm 0.10cm},clip]{figures/stacked}
+    \caption{Logscale author and chunk frequencies per L1 in the \texttt{europe} and \texttt{non-europe} partitions.}
+    \label{fig:stacked_data}
+\end{figure*}
+
+
+Most related to the current work are two studies using transformers for NLI.  \newcite{steinbakken-gamback-2020-bert-nli} fine-tuned BERT \cite{DBLP:conf/naacl/DevlinCLT19} on a less challenging split\footnote{This split only includes Europe-themed subreddits, the content of which frequently reveals the author's geographical location through (e.g.) named entities.} of the Reddit-L2 dataset, applying the model stand-alone, and in an ensemble of classifiers. \newcite{lotfi-etal-2020-gpt2} fine-tuned GPT-2 \cite{Radford2019LanguageMA} per language in the TOEFL-11 dataset, classifying a test instance according to the language-specific model with the lowest loss on that instance. Our method offers a stand-alone transformer model approach with a much lower computational footprint. We will evaluate performance on the Reddit-L2 split with little to no information related to (linguistic) geography.
+
+\newcite{DBLP:journals/tacl/RabinovichTW18} have used hierarchical clustering to investigate the relationship between an author's native language and their lexical choice in English. Using word frequency and embeddings of English words, they measured distances between 31 L1s, showing that languages from the same family appear closest in a vector space. They further suggested that authors with a similar L1 have comparable idiosyncrasies in their English writing. Hence, given an accurate model, we expect to observe such patterns in the embeddings used in the current work as well.
+
+
+\section{Methodology}
+
+\subsection{Data} \label{sec:dataset}
+
+We used a derivative of the Reddit-L2 dataset,\footnote{Via: \url{http://cl.haifa.ac.il/projects/L2/}} first introduced as L2-Reddit by \newcite{DBLP:journals/tacl/RabinovichTW18}, and used in \newcite{goldin-etal-2018-native}. Data collection of 200M sentences ($\sim$3B tokens) from 2005-2017 used flairs that report country of origin on subreddits discussing European politics, yielding a total of 45K labeled native and non-native English-speaking users and their entire post history. Between-group language proficiency was accounted for through several syntactic and lexical metrics, and languages with fewer than 100 authors were removed. Each author profile was split per 100 sentences, and these ``chunks'' were subsequently divided in two: one partition with subreddits discussing European politics (referred to as the \texttt{europe} partition), and a second partition from all other subreddits (the \texttt{non\textunderscore europe} partition). Figure~\ref{fig:stacked_data} visualizes the partition frequencies. 
+
+\paragraph{Sampling} For L1 identification, we regrouped Reddit-L2 on native language rather than nationality. After filtering predominantly multi-lingual countries, this resulted in 23 labels. We found that the majority are native English speakers, followed by Dutch, and that there is a stronger label imbalance in the \texttt{non\textunderscore europe} partition than in \texttt{europe}. 
+
+In accordance with \newcite{goldin-etal-2018-native}, the data was balanced through downsampling by randomly selecting 273 and 104 authors respectively (based on their least represented language) for each language in the two partitions. The amount of chunks per author was capped to reduce activity skew. These were randomly sampled up to the median per author; 17 for \texttt{non\textunderscore europe}, and 3 for \texttt{europe}. 
+
+\paragraph{Preprocessing} \label{sec:preprocessing} For this, we removed redundant blank spaces and replaced all URLs with a special token. While minimal, these changes improved classification performance across the board. 
+
+\paragraph{Splitting} \label{sec:data-splitting} We split the \texttt{non-europe} partition on chunk level\footnote{Splitting by authors had negligible effects.} into equal fine-tuning ($D_\text{tune}$), and training and testing ($D_\text{exp}$) parts. A given author might be represented in multiple chunks; hence, we did not shuffle before splitting. We hypothesized that due to the size and variety of the \texttt{non\textunderscore europe} partition, it is a more realistic, challenging part of the data. Unlike the \texttt{europe} partition used by \newcite{steinbakken-gamback-2020-bert-nli}, it covers a variety of topics and contains fewer context words (e.g., countries and nationalities) that might pollute classification. Instead, we dedicated the entire \texttt{europe} partition to conduct an out-of-sample evaluation. We refer to this data as $D_\text{oos}$. As this part of the data contains texts on topics not seen in $D_\text{tune}$ and $D_\text{exp}$, this allows us to gauge the context specificity of our representations.
+
+
+\subsection{Feature Engineering Baseline} \label{sec:feature-engineering}
+
+The linguistic features\footnote{For comparison sake, we did not optimize these.} (5186 total) were constructed following \newcite{goldin-etal-2018-native} (or using close equivalents), and extracted for each chunk:
+
+\paragraph{$n$-Grams} To extract the 1000 most common uni-gram and character tri-gram features, we used \texttt{scikit-learn} \cite{DBLP:journals/jmlr/PedregosaVGMTGBPWDVPCBPD11} vectorizers fit on the text chunks of $D_\text{exp}$.
+
+\paragraph{Edit Distance \& Substitution} For each misspelled word (identified using \texttt{symspellpy}\footnote{\href{https://github.com/mammothb/symspellpy}{\texttt{github.com/mammothb/symspellpy}}}) in $D_\text{exp}$, we obtained its closest correction with a maximal edit distance of 2. Words for which no correction was found were ignored. The required insertions, deletions, and replacements formed a substitution frequency list, of which the top 400 were used as features. Additionally, for each chunk we summed the Levenshtein distance between all words and their corrections, divided by the total number of words, giving the average edit distance.
+
+\paragraph{Miscellaneous} To extract all other features, each chunk in $D_\text{exp}$ was first split by \texttt{\textbackslash n}. Binary grammar error features (i.e., the presence or absence an an error in that chunk) were extracted using  \texttt{LanguageTool}\footnote{\href{https://github.com/jxmorris12/language_tool_python}{\texttt{github.com/jxmorris12/language\_tool\_py}}} (2017 error types in total). The top 300 POS tri-grams were extracted with \texttt{nltk}\footnote{We used the pre-trained Averaged Perceptron Tagger in combination with the Punkt Tokenizer.} \cite{DBLP:journals/lre/Wagner10}, and function word frequency features used a list \cite[][467 total]{DBLP:journals/lalc/VolanskyOW15}. For average sentence length, we removed all non-alphanumeric symbols of length 1, then divided sentence length (on word level) by the total number of sentences in a chunk (i.e., 100).
+
+
+\subsection{Transformer Model} \label{sec:transformer-models}
+
+To efficiently apply transformers for NLI we opted for Big Bird \cite[\texttt{google/bigbird-roberta-base} on the Hugging Face Model Hub;][]{DBLP:conf/nips/PaszkeGMLBCKLGA19,transformers} as it has a relatively large context length of 4096 tokens while fitting on a single GPU.\footnote{We used an NVIDIA Titan X with 12 GB of VRAM.} 
+
+\paragraph{Fine-tuning} We fine-tuned all layers of Big Bird on $D_\text{tune}$ using the hyperparameters specified in the original paper: Adam \cite{DBLP:journals/corr/KingmaB14} to optimize with the learning rate set to $10^{-5}$ and epsilon to $10^{-8}$. Warm-up on 10\% of all training inputs ran during the first epoch. Fine-tuning ran for 3 epochs totaling 15 hours. 
+Due to memory constraints, we used an input size of 2048, with a batch size of 2. Chunks that were shorter were padded to match the input length; longer inputs were split into sub-chunks (padded to full length). 
+
+\paragraph{Embedding Representation} In order to compare Big Bird to linguistic features, we only extract its embeddings (either pre-trained from the Model Hub or our own fine-tuned version), using them as input to a classifier. Per chunk, we added \texttt{[CLS]} at the beginning of the first sentence, and manually inserted a separator token between each sentence and at the end of the chunk.
+We then used the last hidden states for \texttt{[CLS]} as the chunk's 768-dimensional embedding features. We experimented with 3 token input sizes: 512 (BERT's input size), 2048 (size also used when fine-tuning), and 4096  (Big Bird's maximum input size). 
+
+
+\section{Experimental Setup} \label{sec:experiment-design}
+
+\subsection{Main Experiment} \label{sec:classifiers}
+We trained a logistic regression classifier on the output of each feature extractor. To further establish an equal ground for comparison, we did not tune the hyperparameters of these classifiers. Hence, we adopted \texttt{scikit-learn}'s default parameters: $\ell_2$ normalization, $C = 1$, L-BFGS \cite{DBLP:journals/mp/LiuN89} for optimization, and maximum  iterations set to 1000. We used average accuracy over 10-fold cross-validation (CV) to gauge the robustness of each classifier's performance. 
+
+
+\subsection{Embedding Space Analysis} \label{sec:method-embeddings-space-analysis}
+
+Following \newcite{DBLP:journals/tacl/RabinovichTW18}, we used hierarchical clustering to analyze how each native language is represented in the 768-dimensional embedding space. We used the best performing pre-trained and fine-tuned Big Bird models from our main experiment to compute the centroids (23 in total) on $D_\text{exp}$. Subsequently, we used \texttt{scipy}'s \cite{2020SciPy-NMeth} implementation of Ward's linkage function \cite{doi:10.1080/01621459.1963.10500845} to create a cluster dendrogram, and \texttt{scikit-learn}'s default implementation of Principal Component Analysis \cite[PCA]{ca8f88b9-5b15-3338-a57a-9a4e79049bef,10.1111/1467-9868.00196} to visualize the centroids in a 2-D space.
+
+
+\subsection{Error Analysis}
+
+\paragraph{Out-of-Sample (OOS) Analysis} \label{sec:out-of-sample}
+To assess generalization,\footnote{Big Bird was reportedly not trained on Reddit.} we trained three classifiers (one per representation method) on $D_\text{exp}$ and tested on $D_\text{oos}$ (only concerns European politics; generally absent in $D_\text{exp}$). Our baseline uses linguistic features, and two classifiers use Big Bird embeddings from the best performing pre-trained and fine-tuned feature extractors (see Table~\ref{tab:results}). We considered both versions of the feature extractor to control for any data leakage that occurred during fine-tuning.
+
+\paragraph{Sensitivity to Text Length} To gauge the effect of text length on performance, we randomly sampled 1000 chunks from $D_\text{exp}$ and created slices\footnote{Sliced on \texttt{\textbackslash n}. We also experimented with sentence, clause, and character-level---all yielding similar results.} of 10\%, 20\%, 40\%, and 80\% of the total length of the chunk, following a similar baseline and embedding extraction method as the out-of-sample analysis. Next, we trained a logistic regression classifier, similar to those described in Section \ref{sec:classifiers}, on all of $D_\text{exp}$ except the 1000 randomly sampled chunks. Then, we obtained predictions for all slices, and computed the accuracy for each slice group.
+
+\paragraph{Out-of-Domain (OOD) Analysis} \label{sec:out-of-domain} In order to measure true out-of-domain performance, we used the TOEFL-11 \cite{https://doi.org/10.1002/j.2333-8504.2013.tb02331.x} set as $D_\text{ood}$; specifically the test split, filtered on the five languages that overlap with our training data (French, German,  Italian, Spanish, and Turkish). It should be noted that the average amount of tokens per instance for TOEFL (322) is significantly lower than the average in $D_\text{exp}$ (1726). Hence, we expect performance to suffer as a result.
+
+\section{Results} \label{sec:results}
+
+\begin{table}[t]
+    \centering
+    \footnotesize
+    \begin{tabular}{lrrrr}
+        \toprule
+        Name & Hours & ACV & OOS & OOD \\
+        \midrule
+        Feature Eng.   & 13.00 & .475      & .637      & .172 \\
+        BigBird-512           &  0.27 & .364      &    -      & - \\
+        BigBird-512-t    &  0.27 & .432      &    -      & - \\
+        BigBird-2048          &  2.50 & .493      & .774      & .102 \\
+        BigBird-2048-t    &  2.50 & \bf{.654} & \bf{.855} & \bf{.204} \\      
+        BigBird-4096          &  3.00 & .500      &    -      & - \\
+        BigBird-4096-t   &  3.00 & .635      &    -      & - \\
+        \bottomrule
+    \end{tabular}
+    \caption{The models (Name) annotated with their input dimensions and if they were fine-[t]uned, how long feature extraction took on $D_\text{exp}$ (Hours), their average cross-validation accuracy scores on $D_\text{exp}$ (ACV) and accuracy scores on $D_\text{oos}$ (OOS, \texttt{r/Europe}) and $D_\text{ood}$ (OOD, TOEFL-11).}
+    \label{tab:results}
+\end{table}
+
+
+\subsection{Main Experiment}
+
+Table~\ref{tab:results} shows the average CV scores of each classifier. BigBird-2048-t yielded the highest average CV accuracy with 65.38\%; a 17 point increase over the baseline trained on linguistic features (47.55\%). The classifiers trained on fine-tuned embeddings outperformed those using pre-trained embeddings across all three model variants. However, differences are smallest for BigBird-512, suggesting that the short input size limits fine-tuning's efficiency. Increasing input size beyond 2048 tokens seems to have a small effect; however, given that the average chunk length in $D_\text{exp}$ is 1726 tokens, with an input size of 2048 tokens, most are captured already.
+
+Finally, our classifiers show comparable errors between L1s;  in most cases, the classifiers confuse the true language with a language from the same language family or a language of a nearby country (e.g. Serbian with Croatian, Croatian with Russian or Polish with Czech).
+
+
+\subsection{Embedding Space Analysis}
+
+\begin{figure}[t]
+    \centering
+    \includestandalone[scale=0.78,trim={0cm 0.05cm 0.1cm 0.12cm},clip]{figures/clustering}
+    \caption{Hierarchical clustering dendograms of native language centroids in the Big Bird embedding space before and after fine-tuning.}
+    \label{fig:language_clustering}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includestandalone[scale=0.8,trim={0.05cm 0.2cm 0cm 0.09cm},clip]{figures/pca}
+    \caption{2-Dimensional PCA space showing the language centroids before and after fine-tuning.}
+    \label{fig:pca}
+\end{figure}
+
+Although our clustering shows some overlap with the results of \newcite{DBLP:journals/tacl/RabinovichTW18}, there are some deviations. Languages from the same language family are not always close (see Figure~\ref{fig:language_clustering}, fine-tuned or not). For example, Russian is clustered with Turkish (pre-trained) and Italian with the former Yugoslavian languages (fine-tuned). Furthermore, fine-tuning shifts the embedding space more toward separating individual languages, rather than separating native-English from non-native English (as indicated by English having its own cluster). This effect is most apparent in the low-dimensional PCA space (see Figure~\ref{fig:pca}).  In the fine-tuned space, an interesting artifact can be observed, where the space roughly mimics the languages' geographical orientation to each other.
+
+
+\subsection{Error Analysis}
+
+\paragraph{Out-of-sample Analysis} Here we see the same pattern as in our main experiment (see Table~\ref{tab:results}), with the fine-tuned embedding approach yielding the most accurate classifier, outperforming the feature engineering baseline by 22 percentage points, whereas the pre-trained model gains 13.7.
+
+\paragraph{Sensitivity to Text Length} In Figure \ref{fig:text_length}, it can be observed that the performance of both embedding and feature engineering classifiers deteriorates as text length decreases. However, the deterioration is not linear, which suggests there is increased redundancy in the information used for classification the longer the input becomes. The embeddings are more affected, with a 12 point drop when reducing from 80\% to 40\% and a 14 point drop when reducing from 40\% to 20\%, compared to 5 points and 7 points for the feature engineering model.
+
+\begin{figure}[t]
+    \centering
+    \includestandalone[width=0.47\textwidth,trim={1.1cm 0.34cm 0 0.12cm},clip]{figures/text_length}
+    \caption{Baseline and embedding model accuracy scores by percentage of total input length.}
+    \label{fig:text_length}
+\end{figure}
+
+\paragraph{Out-of-Domain Analysis} Turning to the results in Table~\ref{tab:results} again, we can observe a strong drop-off in performance when both feature engineering and embedding-based models are applied to shorter, closed-form text. Interestingly, with the average TOEFL document being 15.3\% of the maximum input length, the performance is only slightly lower than the expected in-domain performance under such input constraints (see Figure~\ref{fig:text_length} for comparable input length effects). Note that this only provides a contextual view on performance differences; TOEFL-11 models'  benchmark performance is close to 90\% accuracy \cite{DBLP:conf/bea/MalmasiECTPHNQ17}.
+
+\paragraph{Cross-Domain Analysis}
+
+\begin{table}[t]
+    \footnotesize
+    \centering
+    \begin{tabular}{p{3cm}rrrr}
+        \toprule
+        Train & \multicolumn{2}{c}{\st{EU}} & \multicolumn{2}{c}{TFL} \\
+        \cmidrule{2-3} \cmidrule{4-5}
+        Test & \st{EU} &  TFL & \st{EU} &  TFL \\
+        \midrule
+        Feature Eng.   &     .729  &     .262  &     .406  & \bf{.754} \\
+        BigBird-2048   &     .748  &     .280  &     .312  &     .660 \\
+        BigBird-2048-t & \bf{.821} & \bf{.370} & \bf{.610} &     .560 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Cross-evaluation accuracy scores between different models trained and tested on the \texttt{non\_europe} (\st{EU}) and TOEFL-11 (TFL) datasets.}
+    \label{tab:cross-results}
+\end{table}
+
+Results of the previous error analyses called for further cross-examination (reported in Table~\ref{tab:cross-results}).\footnote{Please note that these experiments used a train/test split with identical labels (five languages per set); hence, these experiments are markedly different from Table~\ref{tab:results}.} Here, in addition to the decreased Reddit-L2 subset difficulty with fewer labels, we can observe the same performance patterns---with one exception. Without additional optimization, the feature engineering model seems more suited for TOEFL (while not included here, our models evenly score $\sim$10\% less on the full TOEFL-11 task). BigBird-2048-t also seems to achieve slightly better out-of-domain performance when trained on TOEFL; with a performance drop of 25.7\% on \texttt{non-europe}, compared to 33.9\% the other way around. However, better performance on TOEFL also seems to cause poorer out-of-domain generalization. This might suggest this benchmark may cause overfitting. Further investigation in this cross-domain setting, in particular featuring previous implementations tested on TOEFL-11 \cite{DBLP:conf/bea/MalmasiECTPHNQ17}, would certainly be a worthwhile contribution to future NLI work.
+
+
+\section{Discussion \& Conclusion}
+
+Our experiments demonstrate how fairly straightforward feature extraction using embeddings from transformers that account for long enough input sequences is faster, and substantially outperforms prior best performing models on Reddit-L2. Some limitations should be mentioned here: the domain is rather restricted, as Reddit's demographics imply the dataset mostly contains highly fluent English speakers, which, in turn, was also the only L2 we focused on. Hence, other social platforms are worth evaluating on as well (although label collection will likely be significantly more challenging). 
+
+For future work, we expect even better results might be achieved tuning other classifiers than  logistic regression, and a comparison with similar transformers such as Longformer \cite{DBLP:journals/corr/abs-2004-05150} and Transformer-XL \cite{DBLP:conf/acl/DaiYYCLS19} is certainly worthwhile \cite{DBLP:journals/corr/abs-2304-11062}. As is commonly observed \cite{DBLP:conf/naacl/DevlinCLT19,DBLP:conf/cncl/SunQXH19,DBLP:conf/acl/RuderH18}, fine-tuning Big Bird on our data improved performance, and our observations proved robust both throughout cross-validation and on out-of-sample data. Given the results and error analyses, we believe our works offers various starting points for future NLI work, and that the ideas presented may be broadly applied as an efficient method in text classification problems that specifically deal with longer inputs.
+
+
+\section{Acknowledgments}
+
+Our research strongly relied on openly available resources.  We thank all whose work we could use. We would also like to thank a subset of the reviewers for their helpful comments.
+
+\nocite{*}
+\section{Bibliographical References}\label{sec:reference}
+\bibliographystyle{lrec_natbib}
+\bibliography{references}
+
+\end{document}

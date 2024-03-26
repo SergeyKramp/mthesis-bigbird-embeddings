@@ -1,0 +1,403 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary[groupplots]
+\usepgfplotslibrary{colorbrewer}
+
+\usepackage[T1]{fontenc}
+% % Palatino for main text and math
+\usepackage{times}
+
+% % Helvetica for sans serif
+% % (scaled to match size of Palatino)
+% \usepackage[scaled=0.90]{helvet}
+
+% % Bera Mono for monospaced
+% % (scaled to match size of Palatino)
+% \usepackage[scaled=0.85]{beramono}
+
+
+\begin{document}
+
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{darkslategray38}{RGB}{38,38,38}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{sienna1408675}{RGB}{140,86,75}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\definecolor{steelblue31119180}{HTML}{648fff}
+\definecolor{mediumpurple148103189}{HTML}{785ef0}
+\definecolor{darkorange25512714}{HTML}{fe6100}
+\definecolor{forestgreen4416044}{HTML}{dc267f}
+\definecolor{crimson2143940}{HTML}{ffb000}
+\definecolor{sienna1408675}{HTML}{000000}
+
+\begin{groupplot}[group style={group size=2 by 1, horizontal sep=2.2cm}]
+\nextgroupplot[
+axis line style={lightgray204},
+enlargelimits=false,
+height=9cm,
+tick align=outside,
+title style={yshift=-1.4ex},
+title={Pretrained Model},
+width=4.3cm,
+x dir=reverse,
+x grid style={lightgray204},
+xmajorticks=false,
+xmin=0, xmax=1.28467296481331,
+xtick style={color=darkslategray38},
+y grid style={lightgray204},
+ymajorticks=true,
+ytick pos=right,
+ymin=0, ymax=230,
+ytick style={color=darkslategray38},
+ytick={5,15,25,35,45,55,65,75,85,95,105,115,125,135,145,155,165,175,185,195,205,215,225},
+yticklabel style={anchor=west},
+yticklabels={
+  Serbian,
+  Croatian,
+  Romanian,
+  Spanish,
+  Portuguese,
+  Italian,
+  French,
+  Turkish,
+  Russian,
+  Slovenian,
+  Czech,
+  Estonian,
+  Hungarian,
+  German,
+  Polish,
+  Lithuanian,
+  Greek,
+  Bulgarian,
+  Norwegian,
+  Dutch,
+  Finnish,
+  Swedish,
+  English
+}
+]
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,5)
+--(axis cs:0.222877217669785,5)
+--(axis cs:0.222877217669785,15)
+--(axis cs:0,15);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0.222877217669785,10)
+--(axis cs:0.418531153308582,10)
+--(axis cs:0.418531153308582,25)
+--(axis cs:0,25);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,35)
+--(axis cs:0.289260813450611,35)
+--(axis cs:0.289260813450611,45)
+--(axis cs:0,45);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0.418531153308582,17.5)
+--(axis cs:0.496470565212455,17.5)
+--(axis cs:0.496470565212455,40)
+--(axis cs:0.289260813450611,40);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,55)
+--(axis cs:0.414225173025582,55)
+--(axis cs:0.414225173025582,65)
+--(axis cs:0,65);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0.496470565212455,28.75)
+--(axis cs:0.602570522290264,28.75)
+--(axis cs:0.602570522290264,60)
+--(axis cs:0.414225173025582,60);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,75)
+--(axis cs:0.601155973930709,75)
+--(axis cs:0.601155973930709,85)
+--(axis cs:0,85);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0.602570522290264,44.375)
+--(axis cs:0.850258539480154,44.375)
+--(axis cs:0.850258539480154,80)
+--(axis cs:0.601155973930709,80);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,95)
+--(axis cs:0.228559590404589,95)
+--(axis cs:0.228559590404589,105)
+--(axis cs:0,105);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.228559590404589,100)
+--(axis cs:0.250226560048002,100)
+--(axis cs:0.250226560048002,115)
+--(axis cs:0,115);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.250226560048002,107.5)
+--(axis cs:0.29364424014221,107.5)
+--(axis cs:0.29364424014221,125)
+--(axis cs:0,125);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.29364424014221,116.25)
+--(axis cs:0.341783305742762,116.25)
+--(axis cs:0.341783305742762,135)
+--(axis cs:0,135);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,145)
+--(axis cs:0.245914728160391,145)
+--(axis cs:0.245914728160391,155)
+--(axis cs:0,155);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.341783305742762,125.625)
+--(axis cs:0.39540537551966,125.625)
+--(axis cs:0.39540537551966,150)
+--(axis cs:0.245914728160391,150);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,165)
+--(axis cs:0.292039277910627,165)
+--(axis cs:0.292039277910627,175)
+--(axis cs:0,175);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.39540537551966,137.8125)
+--(axis cs:0.477407212595979,137.8125)
+--(axis cs:0.477407212595979,170)
+--(axis cs:0.292039277910627,170);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,185)
+--(axis cs:0.255377364330278,185)
+--(axis cs:0.255377364330278,195)
+--(axis cs:0,195);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.255377364330278,190)
+--(axis cs:0.316180762966012,190)
+--(axis cs:0.316180762966012,205)
+--(axis cs:0,205);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.316180762966012,197.5)
+--(axis cs:0.378542497357674,197.5)
+--(axis cs:0.378542497357674,215)
+--(axis cs:0,215);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0.477407212595979,153.90625)
+--(axis cs:0.683244884949426,153.90625)
+--(axis cs:0.683244884949426,206.25)
+--(axis cs:0.378542497357674,206.25);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:0.850258539480154,62.1875)
+--(axis cs:1.04401502304116,62.1875)
+--(axis cs:1.04401502304116,180.078125)
+--(axis cs:0.683244884949426,180.078125);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:1.04401502304116,121.1328125)
+--(axis cs:1.22349806172697,121.1328125)
+--(axis cs:1.22349806172697,225)
+--(axis cs:0,225);
+
+
+\nextgroupplot[
+axis line style={lightgray204},
+enlargelimits=false,
+height=9cm,
+tick align=outside,
+title style={yshift=-1.4ex},
+title={Fine-Tuned Model},
+width=4.3cm,
+x dir=reverse,
+x grid style={lightgray204},
+xmajorticks=false,
+xmin=0, xmax=20.9007087065478,
+xtick style={color=darkslategray38},
+y grid style={lightgray204},
+ymajorticks=true,
+ytick pos=right,
+ymin=0, ymax=230,
+ytick style={color=darkslategray38},
+ytick={5,15,25,35,45,55,65,75,85,95,105,115,125,135,145,155,165,175,185,195,205,215,225},
+yticklabel style={anchor=west},
+yticklabels={
+  Swedish,
+  Finnish,
+  Estonian,
+  Bulgarian,
+  Norwegian,
+  Spanish,
+  English,
+  Dutch,
+  German,
+  Portuguese,
+  French,
+  Greek,
+  Turkish,
+  Serbian,
+  Croatian,
+  Slovenian,
+  Italian,
+  Romanian,
+  Hungarian,
+  Lithuanian,
+  Czech,
+  Polish,
+  Russian
+}
+]
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,5)
+--(axis cs:11.4369442453189,5)
+--(axis cs:11.4369442453189,15)
+--(axis cs:0,15);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:0,25)
+--(axis cs:10.6703728828318,25)
+--(axis cs:10.6703728828318,35)
+--(axis cs:0,35);
+
+\path [draw=darkorange25512714, semithick]
+(axis cs:11.4369442453189,10)
+--(axis cs:12.1191315047424,10)
+--(axis cs:12.1191315047424,30)
+--(axis cs:10.6703728828318,30);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,55)
+--(axis cs:11.459809283901,55)
+--(axis cs:11.459809283901,65)
+--(axis cs:0,65);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:0,75)
+--(axis cs:11.1772343754789,75)
+--(axis cs:11.1772343754789,85)
+--(axis cs:0,85);
+
+\path [draw=forestgreen4416044, semithick]
+(axis cs:11.459809283901,60)
+--(axis cs:13.3738146037742,60)
+--(axis cs:13.3738146037742,80)
+--(axis cs:11.1772343754789,80);
+
+\path [draw=crimson2143940, semithick]
+(axis cs:0,95)
+--(axis cs:11.7434893076754,95)
+--(axis cs:11.7434893076754,105)
+--(axis cs:0,105);
+
+\path [draw=crimson2143940, semithick]
+(axis cs:11.7434893076754,100)
+--(axis cs:12.7714543527118,100)
+--(axis cs:12.7714543527118,115)
+--(axis cs:0,115);
+
+\path [draw=mediumpurple148103189, semithick]
+(axis cs:0,135)
+--(axis cs:9.03264922983293,135)
+--(axis cs:9.03264922983293,145)
+--(axis cs:0,145);
+
+\path [draw=mediumpurple148103189, semithick]
+(axis cs:9.03264922983293,140)
+--(axis cs:10.2344152309427,140)
+--(axis cs:10.2344152309427,155)
+--(axis cs:0,155);
+
+\path [draw=mediumpurple148103189, semithick]
+(axis cs:10.2344152309427,147.5)
+--(axis cs:13.8785552940591,147.5)
+--(axis cs:13.8785552940591,165)
+--(axis cs:0,165);
+
+\path [draw=mediumpurple148103189, semithick]
+(axis cs:0,175)
+--(axis cs:11.4221096308037,175)
+--(axis cs:11.4221096308037,185)
+--(axis cs:0,185);
+
+\path [draw=mediumpurple148103189, semithick]
+(axis cs:13.8785552940591,156.25)
+--(axis cs:13.924640817295,156.25)
+--(axis cs:13.924640817295,180)
+--(axis cs:11.4221096308037,180);
+
+\path [draw=sienna1408675, semithick]
+(axis cs:0,195)
+--(axis cs:10.0531031316948,195)
+--(axis cs:10.0531031316948,205)
+--(axis cs:0,205);
+
+\path [draw=sienna1408675, semithick]
+(axis cs:10.0531031316948,200)
+--(axis cs:10.7700901521327,200)
+--(axis cs:10.7700901521327,215)
+--(axis cs:0,215);
+
+\path [draw=sienna1408675, semithick]
+(axis cs:10.7700901521327,207.5)
+--(axis cs:12.2422167403656,207.5)
+--(axis cs:12.2422167403656,225)
+--(axis cs:0,225);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:12.1191315047424,20)
+--(axis cs:13.9848524282293,20)
+--(axis cs:13.9848524282293,45)
+--(axis cs:0,45);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:13.9848524282293,32.5)
+--(axis cs:16.0836532380491,32.5)
+--(axis cs:16.0836532380491,70)
+--(axis cs:13.3738146037742,70);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:12.7714543527118,107.5)
+--(axis cs:14.8844749285999,107.5)
+--(axis cs:14.8844749285999,125)
+--(axis cs:0,125);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:16.0836532380491,51.25)
+--(axis cs:17.6498989836203,51.25)
+--(axis cs:17.6498989836203,116.25)
+--(axis cs:14.8844749285999,116.25);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:13.924640817295,168.125)
+--(axis cs:17.0276693723796,168.125)
+--(axis cs:17.0276693723796,216.25)
+--(axis cs:12.2422167403656,216.25);
+
+\path [draw=steelblue31119180, semithick]
+(axis cs:17.6498989836203,83.75)
+--(axis cs:19.9054368633789,83.75)
+--(axis cs:19.9054368633789,192.1875)
+--(axis cs:17.0276693723796,192.1875);
+
+\end{groupplot}
+
+\end{tikzpicture}
+
+\end{document}
